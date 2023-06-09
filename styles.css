@@ -1,0 +1,65 @@
+body {
+    background-color: #fa8072 ;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 50px;
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+}
+#machine-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: #000;
+    border: 3px solid crimson;
+    width: 35vw;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px 25px;
+    border-radius: 10px;
+}
+
+#machine-body label,
+#machine-body select {
+margin-bottom: 15px;
+}
+
+#root {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#submit-input {
+    color: #007bff;
+    background-color: #fff;
+}
+
+#submit-input:hover {
+    color: #0400ff;
+    border: 1px solid #0400ff;
+    background-color: #fff;
+}
+
+#number-input:hover {
+    border: 1px solid #0400ff;
+}
+
+
