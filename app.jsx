@@ -1,6 +1,6 @@
 //5. determines if transation is valid or not
 const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
-  const choice = ["Deposit", "Withdrawl"];
+  const choice = ["Deposit", "Withdrawal"];
   return (
     <label className="label huge">
       <h3> {choice[Number(!isDeposit)]} </h3>
@@ -27,7 +27,7 @@ const Account = () => {
     if (Number(event.target.value) <= 0) {
       return setValidTransaction(false);
     }
-    if (atmMode === "Withdrawl" && Number(event.target.value) > totalState) {
+    if (atmMode === "Withdrawal" && Number(event.target.value) > totalState) {
       setValidTransaction(false)
     } else {
       setValidTransaction(true);
@@ -62,7 +62,7 @@ const Account = () => {
       <select onChange={(e) => handleModeSelect(e)}name="mode" id="mode-select">
         <option id="no-selection" value=""></option>
         <option id="deposit-selection" value="Deposit">Select fot Deposit</option>
-        <option id="withdrawl-selection" value="Withdrawl">Select for Withdrawl</option>
+        <option id="withdrawal-selection" value="Withdrawal">Select for Withdrawal</option>
       </select>
       {atmMode ? (
       <ATMDeposit 
