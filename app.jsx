@@ -31,16 +31,19 @@ const Account = () => {
       setValidTransaction(false)
     } else {
       setValidTransaction(true);
+      
     }
     setDeposit(Number(event.target.value));
   };
   
   //3. Updates account 
   const handleSubmit = (event) => {
+    
     let newTotal = isDeposit ? totalState + deposit : totalState - deposit;
     setTotalState(newTotal);
     setValidTransaction(false);
     event.preventDefault();
+    
   };
 
   //4. faciltates change between deposit and withdrawl in the DOM
@@ -48,11 +51,12 @@ const Account = () => {
     setAtmMode(event.target.value);
     setValidTransaction(false);
     if (event.target.value === 'Deposit') {
-      setIsdeposit(true);
+      setIsdeposit(true); 
     }else {
       setIsdeposit(false);
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
